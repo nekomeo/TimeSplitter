@@ -13,11 +13,21 @@
 @end
 
 @implementation ViewController
+@synthesize timerLabel, startButton, resetButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    running = NO;
+    count = 0;
+    timerLabel.text = @"00:00:00";
 }
 
+- (IBAction)startBtnPushed:(id)sender {
+    NSLog(@"Start button pushed");
+}
 
+- (IBAction)splitTimeBtnPushed:(id)sender {
+    NSLog(@"Split button pushed");
+}
 @end
