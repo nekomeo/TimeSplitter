@@ -24,7 +24,7 @@
 - (IBAction)resetBtnPushed:(id)sender;
 - (IBAction)splitTimeBtnPushed:(id)sender;
 
-- (void)updateTimer;
+- (void)timerTicking;
 
 @end
 
