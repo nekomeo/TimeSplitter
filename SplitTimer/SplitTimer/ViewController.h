@@ -12,13 +12,13 @@
 {
     NSTimer *timer;
     BOOL running;
-    int count;
+    int timeInSeconds;
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
-@property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 @property (weak, nonatomic) IBOutlet UIButton *resetButton;
 @property (weak, nonatomic) IBOutlet UIButton *splitTimeButton;
+@property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 
 - (IBAction)startBtnPushed:(id)sender;
 - (IBAction)resetBtnPushed:(id)sender;
