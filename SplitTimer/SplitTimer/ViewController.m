@@ -8,12 +8,13 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @end
 
 @implementation ViewController
-@synthesize timerLabel, startButton, resetButton;
+@synthesize timerLabel, startButton, resetButton, lapTable, lapLabel;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,6 +22,12 @@
     running = NO;
     timeInSeconds = 0;
     timerLabel.text = @"00:00.00";
+    lapTimes = @[@"0:00.34", @"0:02.45"];
+    
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                              action:@selector(tap:)];
+    gesture.delegate = self;
+    [self tap:gesture];
 }
 
 - (IBAction)startBtnPushed:(id)sender {
@@ -82,6 +89,26 @@
     [self stopTimer];
     timer = 0;
     timerLabel.text = @"00:00.00";
+}
+
+- (void)tap:(UITapGestureRecognizer *)gestureRecognizer {
+    NSLog(@"Tapped");
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return lapTimes.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"cellIdentifier";
+    
+    UITableViewCell *cell = [self.lapTable dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if(cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    cell.textLabel.text =  [lapTimes objectAtIndex:indexPath.row];
+    return cell;
 }
 
 @end

@@ -35,6 +35,7 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="zTE-RY-mhJ" firstAttribute="top" secondItem="MdJ-a7-R5w" secondAttribute="top" constant="20" id="4h5-fG-nD8"/>
                                     <constraint firstAttribute="bottom" secondItem="zTE-RY-mhJ" secondAttribute="bottom" constant="20" id="7R3-lM-qFP"/>
@@ -45,6 +46,9 @@
                                     <constraint firstAttribute="trailing" secondItem="zTE-RY-mhJ" secondAttribute="trailing" constant="20" id="arI-Ka-LPa"/>
                                     <constraint firstItem="zTE-RY-mhJ" firstAttribute="leading" secondItem="MdJ-a7-R5w" secondAttribute="leading" constant="20" id="c0t-zd-4Qw"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="p1n-kY-UfV" appends="YES" id="5EH-N7-UCj"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJA-7t-yWv">
                                 <rect key="frame" x="101" y="515" width="34" height="30"/>
@@ -67,15 +71,46 @@
                                     <action selector="stopBtnPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oYG-8O-OD1"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SmG-MH-drM">
+                                <rect key="frame" x="0.0" y="598" width="414" height="254"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="wiZ-fb-kCj">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wiZ-fb-kCj" id="VHS-eX-NYx">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiL-xz-0IG">
+                                                    <rect key="frame" x="10" y="0.5" width="384" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="UiL-xz-0IG" secondAttribute="trailing" constant="20" id="LAy-FB-XJo"/>
+                                                <constraint firstItem="UiL-xz-0IG" firstAttribute="top" secondItem="VHS-eX-NYx" secondAttribute="top" constant="0.5" id="QmT-UK-hfW"/>
+                                                <constraint firstItem="UiL-xz-0IG" firstAttribute="leading" secondItem="VHS-eX-NYx" secondAttribute="leading" constant="10" id="wwn-2r-jsz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SmG-MH-drM" secondAttribute="trailing" id="34n-Xd-b8O"/>
+                            <constraint firstItem="SmG-MH-drM" firstAttribute="top" secondItem="vJA-7t-yWv" secondAttribute="bottom" constant="53" id="FOe-DJ-CeS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vJA-7t-yWv" secondAttribute="bottom" constant="317" id="Ily-Ir-9nI"/>
                             <constraint firstItem="MdJ-a7-R5w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="UKm-V4-qCx"/>
                             <constraint firstItem="Nxg-9d-zeR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="184" id="Xr3-uO-ZhJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SmG-MH-drM" secondAttribute="bottom" constant="10" id="a9k-wq-dNJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WBU-Hd-oxU" secondAttribute="bottom" constant="317" id="aBf-Zy-ubf"/>
                             <constraint firstItem="vJA-7t-yWv" firstAttribute="top" secondItem="MdJ-a7-R5w" secondAttribute="bottom" constant="100" id="fzT-Pi-gSm"/>
                             <constraint firstItem="MdJ-a7-R5w" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hQH-i1-M0v"/>
+                            <constraint firstItem="SmG-MH-drM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kEX-IK-Nd7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MdJ-a7-R5w" secondAttribute="bottom" constant="447" id="nLz-zJ-Zoa"/>
                             <constraint firstItem="Nxg-9d-zeR" firstAttribute="top" secondItem="eDb-BU-hMI" secondAttribute="bottom" constant="145" id="oq5-06-J07"/>
                             <constraint firstItem="vJA-7t-yWv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="101" id="qln-Br-AHb"/>
@@ -87,6 +122,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="lapLabel" destination="UiL-xz-0IG" id="itn-4j-r9X"/>
+                        <outlet property="lapTable" destination="SmG-MH-drM" id="JU6-VY-RBt"/>
                         <outlet property="resetButton" destination="WBU-Hd-oxU" id="nC1-yL-Vsu"/>
                         <outlet property="splitTimeButton" destination="eDb-BU-hMI" id="SL3-8n-icK"/>
                         <outlet property="startButton" destination="vJA-7t-yWv" id="cCh-Ri-fhG"/>
@@ -95,6 +132,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="p1n-kY-UfV"/>
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>

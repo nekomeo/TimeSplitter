@@ -13,6 +13,7 @@
     NSTimer *timer;
     BOOL running;
     int timeInSeconds;
+    NSArray *lapTimes;
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
@@ -20,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *splitTimeButton;
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 @property (weak, nonatomic) IBOutlet UIButton *stopButton;
+@property (weak, nonatomic) IBOutlet UITableView *lapTable;
+@property (weak, nonatomic) IBOutlet UILabel *lapLabel;
 
 - (IBAction)startBtnPushed:(id)sender;
 - (IBAction)resetBtnPushed:(id)sender;
