@@ -46,6 +46,12 @@
 //    NSLog(@"Split button pushed");
 }
 
+- (IBAction)stopBtnPushed:(id)sender {
+    running = NO;
+    [timer invalidate];
+    timer = nil;
+}
+
 - (IBAction)resetBtnPushed:(id)sender {
 //    NSLog(@"Reset button pushed");
     [self resetTimer];
@@ -54,15 +60,15 @@
 - (void)timerTicking {
     timeInSeconds++;
     
-    int min = floor(timeInSeconds/100/60);
-    int sec = floor(timeInSeconds/100);
+    int min = floor(timeInSeconds / 100 / 60);
+    int sec = floor(timeInSeconds / 100);
     int mSec = timeInSeconds % 100;
     
     if (sec >= 60) {
         sec = sec % 60;
     }
     
-    timerLabel.text = [NSString stringWithFormat:@"%02d:%02d.%02d",min,sec,mSec];
+    timerLabel.text = [NSString stringWithFormat:@"%02d:%02d.%02d", min, sec, mSec];
 }
 
 - (void)stopTimer {

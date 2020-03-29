@@ -19,10 +19,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *resetButton;
 @property (weak, nonatomic) IBOutlet UIButton *splitTimeButton;
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
+@property (weak, nonatomic) IBOutlet UIButton *stopButton;
 
 - (IBAction)startBtnPushed:(id)sender;
 - (IBAction)resetBtnPushed:(id)sender;
 - (IBAction)splitTimeBtnPushed:(id)sender;
+- (IBAction)stopBtnPushed:(id)sender;
 
 - (void)timerTicking;
 
