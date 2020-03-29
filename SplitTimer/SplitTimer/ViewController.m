@@ -24,11 +24,11 @@
 }
 
 - (IBAction)startBtnPushed:(id)sender {
-    NSLog(@"Start button pushed");
+//    NSLog(@"Start button pushed");
     
     if (running == NO) {
         running = YES;
-        [startButton setTitle:@"STOP" forState:UIControlStateNormal];
+        [startButton setTitle:@"Stop" forState:UIControlStateNormal];
         
         if (timer == nil) {
             timer = [NSTimer scheduledTimerWithTimeInterval:0.01
@@ -38,13 +38,19 @@
                                                     repeats:YES];
         }
     } else {
-        [self splitTimeButton];
+        [self stopTimer];
     }
 }
 
 - (IBAction)splitTimeBtnPushed:(id)sender {
-    NSLog(@"Split button pushed");
+//    NSLog(@"Split button pushed");
 }
+
+- (IBAction)resetBtnPushed:(id)sender {
+//    NSLog(@"Reset button pushed");
+    [self resetTimer];
+}
+
 - (void)timerTicking {
     timeInSeconds++;
     
@@ -57,6 +63,19 @@
     }
     
     timerLabel.text = [NSString stringWithFormat:@"%02d:%02d.%02d",min,sec,mSec];
+}
+
+- (void)stopTimer {
+    running = NO;
+    [timer invalidate];
+    timer = nil;
+    [startButton setTitle:@"Start" forState:UIControlStateNormal];
+}
+
+- (void)resetTimer {
+    [self stopTimer];
+    timer = 0;
+    timerLabel.text = @"00:00.00";
 }
 
 @end
