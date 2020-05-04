@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,119 +15,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdJ-a7-R5w">
-                                <rect key="frame" x="0.0" y="74" width="414" height="341"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDb-BU-hMI">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="341"/>
-                                        <connections>
-                                            <action selector="splitTimeBtnPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2mH-Dl-Ipt"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTE-RY-mhJ">
-                                        <rect key="frame" x="20" y="20" width="374" height="301"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstItem="zTE-RY-mhJ" firstAttribute="top" secondItem="MdJ-a7-R5w" secondAttribute="top" constant="20" id="4h5-fG-nD8"/>
-                                    <constraint firstAttribute="bottom" secondItem="zTE-RY-mhJ" secondAttribute="bottom" constant="20" id="7R3-lM-qFP"/>
-                                    <constraint firstItem="eDb-BU-hMI" firstAttribute="top" secondItem="MdJ-a7-R5w" secondAttribute="top" id="Bcc-ED-LG7"/>
-                                    <constraint firstAttribute="bottom" secondItem="eDb-BU-hMI" secondAttribute="bottom" id="FcY-xH-9LO"/>
-                                    <constraint firstAttribute="trailing" secondItem="eDb-BU-hMI" secondAttribute="trailing" id="QTA-gv-R6t"/>
-                                    <constraint firstItem="eDb-BU-hMI" firstAttribute="leading" secondItem="MdJ-a7-R5w" secondAttribute="leading" id="YUx-8G-9YF"/>
-                                    <constraint firstAttribute="trailing" secondItem="zTE-RY-mhJ" secondAttribute="trailing" constant="20" id="arI-Ka-LPa"/>
-                                    <constraint firstItem="zTE-RY-mhJ" firstAttribute="leading" secondItem="MdJ-a7-R5w" secondAttribute="leading" constant="20" id="c0t-zd-4Qw"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="p1n-kY-UfV" appends="YES" id="5EH-N7-UCj"/>
-                                </connections>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJA-7t-yWv">
-                                <rect key="frame" x="101" y="515" width="34" height="30"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="startBtnPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TJU-4V-MpK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBU-Hd-oxU">
-                                <rect key="frame" x="276" y="515" width="39" height="30"/>
-                                <state key="normal" title="Reset"/>
-                                <connections>
-                                    <action selector="resetBtnPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v5q-fQ-ZXT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxg-9d-zeR">
-                                <rect key="frame" x="184" y="560" width="46" height="30"/>
-                                <state key="normal" title="Stop"/>
-                                <connections>
-                                    <action selector="stopBtnPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oYG-8O-OD1"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SmG-MH-drM">
-                                <rect key="frame" x="0.0" y="598" width="414" height="254"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="wiZ-fb-kCj">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wiZ-fb-kCj" id="VHS-eX-NYx">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiL-xz-0IG">
-                                                    <rect key="frame" x="10" y="0.5" width="384" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="UiL-xz-0IG" secondAttribute="trailing" constant="20" id="LAy-FB-XJo"/>
-                                                <constraint firstItem="UiL-xz-0IG" firstAttribute="top" secondItem="VHS-eX-NYx" secondAttribute="top" constant="0.5" id="QmT-UK-hfW"/>
-                                                <constraint firstItem="UiL-xz-0IG" firstAttribute="leading" secondItem="VHS-eX-NYx" secondAttribute="leading" constant="10" id="wwn-2r-jsz"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SmG-MH-drM" secondAttribute="trailing" id="34n-Xd-b8O"/>
-                            <constraint firstItem="SmG-MH-drM" firstAttribute="top" secondItem="vJA-7t-yWv" secondAttribute="bottom" constant="53" id="FOe-DJ-CeS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vJA-7t-yWv" secondAttribute="bottom" constant="317" id="Ily-Ir-9nI"/>
-                            <constraint firstItem="MdJ-a7-R5w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="UKm-V4-qCx"/>
-                            <constraint firstItem="Nxg-9d-zeR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="184" id="Xr3-uO-ZhJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SmG-MH-drM" secondAttribute="bottom" constant="10" id="a9k-wq-dNJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WBU-Hd-oxU" secondAttribute="bottom" constant="317" id="aBf-Zy-ubf"/>
-                            <constraint firstItem="vJA-7t-yWv" firstAttribute="top" secondItem="MdJ-a7-R5w" secondAttribute="bottom" constant="100" id="fzT-Pi-gSm"/>
-                            <constraint firstItem="MdJ-a7-R5w" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hQH-i1-M0v"/>
-                            <constraint firstItem="SmG-MH-drM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kEX-IK-Nd7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MdJ-a7-R5w" secondAttribute="bottom" constant="447" id="nLz-zJ-Zoa"/>
-                            <constraint firstItem="Nxg-9d-zeR" firstAttribute="top" secondItem="eDb-BU-hMI" secondAttribute="bottom" constant="145" id="oq5-06-J07"/>
-                            <constraint firstItem="vJA-7t-yWv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="101" id="qln-Br-AHb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nxg-9d-zeR" secondAttribute="trailing" constant="184" id="rmv-VW-OJP"/>
-                            <constraint firstItem="MdJ-a7-R5w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sTQ-2a-N05"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WBU-Hd-oxU" secondAttribute="trailing" constant="99" id="uDj-J6-iZT"/>
-                            <constraint firstItem="WBU-Hd-oxU" firstAttribute="top" secondItem="MdJ-a7-R5w" secondAttribute="bottom" constant="100" id="usL-rE-VuM"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="lapLabel" destination="UiL-xz-0IG" id="itn-4j-r9X"/>
-                        <outlet property="lapTable" destination="SmG-MH-drM" id="JU6-VY-RBt"/>
-                        <outlet property="resetButton" destination="WBU-Hd-oxU" id="nC1-yL-Vsu"/>
-                        <outlet property="splitTimeButton" destination="eDb-BU-hMI" id="SL3-8n-icK"/>
-                        <outlet property="startButton" destination="vJA-7t-yWv" id="cCh-Ri-fhG"/>
-                        <outlet property="stopButton" destination="Nxg-9d-zeR" id="8kn-Tj-M2P"/>
-                        <outlet property="timerLabel" destination="zTE-RY-mhJ" id="lv3-Qi-UbT"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="p1n-kY-UfV"/>

@@ -16,18 +16,15 @@
     NSArray *lapTimes;
 }
 
-@property (weak, nonatomic) IBOutlet UIButton *startButton;
-@property (weak, nonatomic) IBOutlet UIButton *resetButton;
-@property (weak, nonatomic) IBOutlet UIButton *splitTimeButton;
-@property (weak, nonatomic) IBOutlet UILabel *timerLabel;
-@property (weak, nonatomic) IBOutlet UIButton *stopButton;
-@property (weak, nonatomic) IBOutlet UITableView *lapTable;
-@property (weak, nonatomic) IBOutlet UILabel *lapLabel;
+@property (nonatomic, weak) UIButton *squareButton;
+@property (nonatomic, weak) UIButton *portraitButton;
+@property (nonatomic, weak) UIButton *landscapeButton;
 
-- (IBAction)startBtnPushed:(id)sender;
-- (IBAction)resetBtnPushed:(id)sender;
-- (IBAction)splitTimeBtnPushed:(id)sender;
-- (IBAction)stopBtnPushed:(id)sender;
+@property (nonatomic, weak) UIView *levelTitleView;
+@property (nonatomic, weak) UIView *displayView;
+@property (nonatomic, weak) UITableView *tableView;
+@property (nonatomic, weak) NSLayoutConstraint *framingViewHeightConstraint;
+@property (nonatomic, weak) NSLayoutConstraint *framingViewWidthConstraint;
 
 - (void)timerTicking;
 
