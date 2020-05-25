@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A1B8447247B8532009BDEAC /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1B8446247B8532009BDEAC /* TimerViewController.m */; };
 		6A80E108242FE8FF00EDA8C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A80E107242FE8FF00EDA8C2 /* AppDelegate.m */; };
 		6A80E10B242FE8FF00EDA8C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A80E10A242FE8FF00EDA8C2 /* ViewController.m */; };
 		6A80E10E242FE8FF00EDA8C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A80E10C242FE8FF00EDA8C2 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A1B8445247B8532009BDEAC /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		6A1B8446247B8532009BDEAC /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		6A80E103242FE8FF00EDA8C2 /* SplitTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A80E106242FE8FF00EDA8C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6A80E107242FE8FF00EDA8C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 				6A80E107242FE8FF00EDA8C2 /* AppDelegate.m */,
 				6A80E109242FE8FF00EDA8C2 /* ViewController.h */,
 				6A80E10A242FE8FF00EDA8C2 /* ViewController.m */,
+				6A1B8445247B8532009BDEAC /* TimerViewController.h */,
+				6A1B8446247B8532009BDEAC /* TimerViewController.m */,
 				6A80E10C242FE8FF00EDA8C2 /* Main.storyboard */,
 				6A80E10F242FE90000EDA8C2 /* Assets.xcassets */,
 				6A80E111242FE90000EDA8C2 /* LaunchScreen.storyboard */,
@@ -141,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A1B8447247B8532009BDEAC /* TimerViewController.m in Sources */,
 				6A80E10B242FE8FF00EDA8C2 /* ViewController.m in Sources */,
 				6A80E116242FE90100EDA8C2 /* main.m in Sources */,
 				6A80E108242FE8FF00EDA8C2 /* AppDelegate.m in Sources */,

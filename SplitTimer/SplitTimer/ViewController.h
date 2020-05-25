@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TimerViewController.h"
 
 @interface ViewController : UIViewController
 {

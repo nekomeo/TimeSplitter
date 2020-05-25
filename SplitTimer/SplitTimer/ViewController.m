@@ -81,6 +81,8 @@
 
 - (void)startBtnPushed:(id)sender {
     NSLog(@"Start button pushed");
+    TimerViewController *timerVC = [[TimerViewController alloc] init];
+    [self presentViewController:timerVC animated:YES completion:nil];
     
 //    if (running == NO) {
 //        running = YES;
