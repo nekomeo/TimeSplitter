@@ -29,80 +29,12 @@
     [self displayBoxViewProperties];
     [self tableViewBoxProperties];
 
-    
-//    running = NO;
-//    timeInSeconds = 0;
-//    timerLabel.text = @"00:00.00";
-//    lapTimes = @[@"0:00.34", @"0:02.45"];
-    
-//    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self
-//                                                                              action:@selector(tap:)];
-//    gesture.delegate = self;
-//    [self tap:gesture];
 }
 
 - (void)startBtnPushed:(id)sender {
     NSLog(@"Start button pushed");
     TimerViewController *timerVC = [[TimerViewController alloc] init];
     [self presentViewController:timerVC animated:YES completion:nil];
-    
-//    if (running == NO) {
-//        running = YES;
-//        [startButton setTitle:@"Stop" forState:UIControlStateNormal];
-//
-//        if (timer == nil) {
-//            timer = [NSTimer scheduledTimerWithTimeInterval:0.01
-//                                                     target:self
-//                                                   selector:@selector(timerTicking)
-//                                                   userInfo:nil
-//                                                    repeats:YES];
-//        }
-//    } else {
-//        [self stopTimer];
-//    }
-}
-
-- (void)splitTimeBtnPushed:(id)sender {
-//    NSLog(@"Split button pushed");
-    
-}
-
-- (void)stopBtnPushed:(id)sender {
-    running = NO;
-    [timer invalidate];
-    timer = nil;
-}
-
-- (void)resetBtnPushed:(id)sender {
-//    NSLog(@"Reset button pushed");
-    [self resetTimer];
-}
-
-- (void)timerTicking {
-//    timeInSeconds++;
-//
-//    int min = floor(timeInSeconds / 100 / 60);
-//    int sec = floor(timeInSeconds / 100);
-//    int mSec = timeInSeconds % 100;
-//
-//    if (sec >= 60) {
-//        sec = sec % 60;
-//    }
-    
-//    timerLabel.text = [NSString stringWithFormat:@"%02d:%02d.%02d", min, sec, mSec];
-}
-
-- (void)stopTimer {
-//    running = NO;
-//    [timer invalidate];
-//    timer = nil;
-//    [startButton setTitle:@"Start" forState:UIControlStateNormal];
-}
-
-- (void)resetTimer {
-//    [self stopTimer];
-//    timer = 0;
-//    timerLabel.text = @"00:00.00";
 }
 
 - (void)tap:(UITapGestureRecognizer *)gestureRecognizer {

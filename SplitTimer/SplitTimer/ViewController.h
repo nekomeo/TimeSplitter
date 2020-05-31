@@ -10,12 +10,6 @@
 #import "TimerViewController.h"
 
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
-{
-    NSTimer *timer;
-    BOOL running;
-    int timeInSeconds;
-    NSArray *lapTimes;
-}
 
 @property (nonatomic, weak) UIButton *squareButton;
 @property (nonatomic, weak) UIButton *portraitButton;
