@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TimerViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     NSTimer *timer;
     BOOL running;
@@ -23,7 +23,7 @@
 
 @property (nonatomic, weak) UIView *levelTitleView;
 @property (nonatomic, weak) UIView *displayView;
-@property (nonatomic, weak) UITableView *tableView;
+@property (nonatomic, strong) UITableView *recordstableView;
 @property (nonatomic, weak) NSLayoutConstraint *framingViewHeightConstraint;
 @property (nonatomic, weak) NSLayoutConstraint *framingViewWidthConstraint;
 

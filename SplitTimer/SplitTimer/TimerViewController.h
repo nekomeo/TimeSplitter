@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TimerViewController : UIViewController
+@interface TimerViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, weak) UIView *mainTimerView;
+@property (nonatomic, strong) UITableView *lapTableView;
 
 @end
 
